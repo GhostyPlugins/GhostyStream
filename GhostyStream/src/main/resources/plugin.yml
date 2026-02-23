@@ -1,0 +1,57 @@
+name: GhostyStream
+version: '${project.version}'
+main: ghostystream.GhostyStream
+api-version: '1.21'
+author: Ger_Gh0stface
+description: Content Creator Plugin – Stream, Creator Codes & GUI
+website: https://github.com/Ger_Gh0stface
+
+softdepend:
+  - Vault
+  - Essentials
+
+commands:
+  stream:
+    description: Aktiviere/Deaktiviere deinen Live-Status mit einem Stream-Link.
+    usage: /stream <link|stop>
+    permission: ghostystream.stream
+
+  content:
+    description: Öffnet das Content Creator Menü.
+    usage: /content
+    permission: ghostystream.content
+
+  creatorcode:
+    description: Erstelle oder löse einen Creator Code ein.
+    usage: /creatorcode <create|redeem> [...]
+    permission: ghostystream.creatorcode
+
+  ghostystream:
+    aliases: [gs]
+    description: Haupt-Befehl für GhostyStream Administration.
+    usage: /ghostystream <reload|addcreator|removecreator>
+    permission: ghostystream.admin
+
+permissions:
+  ghostystream.stream:
+    description: Kann den /stream Befehl nutzen (Content Creator).
+    default: false
+
+  ghostystream.content:
+    description: Kann das /content GUI öffnen.
+    default: true
+
+  ghostystream.creatorcode:
+    description: Kann Creator Codes einlösen.
+    default: true
+
+  ghostystream.creatorcode.create:
+    description: Kann Creator Codes erstellen (Admin).
+    default: op
+
+  ghostystream.admin:
+    description: Vollständiger Admin-Zugriff auf GhostyStream.
+    default: op
+    children:
+      ghostystream.stream: true
+      ghostystream.creatorcode.create: true

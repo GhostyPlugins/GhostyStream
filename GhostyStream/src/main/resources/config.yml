@@ -1,0 +1,28 @@
+# ============================================================
+#   GhostyStream - Configuration
+#   Author: Ger_Gh0stface
+# ============================================================
+
+# Sprache / Language: en, de
+language: de
+
+# Wie oft (in Minuten) die Stream-Nachricht im Chat erscheint
+stream-broadcast-interval-minutes: 20
+
+# Nach wie vielen Minuten wird der Stream automatisch deaktiviert
+stream-auto-stop-minutes: 60
+
+# Belohnung für den Streamer pro Code-Einlösung (Vault-Währung)
+streamer-reward: 2000.0
+
+# GUI Einstellungen
+gui:
+  title: "&8» &6Content Creator &8«"
+  size: 54
+  # Item wenn kein Creator online/live ist
+  empty-item:
+    material: GRAY_STAINED_GLASS_PANE
+    name: "&7Keine Creator aktiv"
+
+# Debug-Modus (mehr Konsolen-Ausgaben)
+debug: false

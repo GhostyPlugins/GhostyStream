@@ -1,0 +1,92 @@
+# ============================================================
+#   GhostyStream – Sprachdatei: Deutsch (de)
+#   Autor: Ger_Gh0stface
+#   Unterstützt & Farbcodes sowie &#RRGGBB Hex-Codes
+# ============================================================
+
+prefix: "&#FF6A00&l[&#FF9900Ghosty&#FF6A00Stream&#FF9900] &r"
+
+# ── Allgemein ──────────────────────────────────────────────
+no-permission: "{prefix}&cDu hast keine Berechtigung für diesen Befehl."
+player-only: "{prefix}&cDieser Befehl ist nur für Spieler."
+player-not-found: "{prefix}&cSpieler &e{player} &cwurde nicht gefunden."
+reload-success: "{prefix}&aPlugin erfolgreich neu geladen!"
+unknown-subcommand: "{prefix}&cUnbekannter Unterbefehl. Nutze &e/ghostystream help&c."
+
+# ── /stream ────────────────────────────────────────────────
+stream-usage: "{prefix}&cNutzung: &e/stream <link|stop>"
+stream-invalid-link: "{prefix}&cBitte gib einen gültigen Link ein (http/https)."
+stream-started: "{prefix}&aDu bist jetzt &2&lLIVE&a! Dein Stream wird alle &e{interval} Minuten&a angekündigt und stoppt automatisch nach &e{duration} Minuten&a."
+stream-already-live: "{prefix}&cDu bist bereits live! Nutze &e/stream stop&c zum Beenden."
+stream-stopped: "{prefix}&cDein Stream wurde &4deaktiviert&c."
+stream-not-active: "{prefix}&cDu hast keinen aktiven Stream."
+stream-auto-stopped: "{prefix}&cDein Stream wurde automatisch nach {duration} Minuten &4deaktiviert&c."
+
+# Broadcast-Nachricht (alle X Minuten im Chat)
+stream-broadcast: |
+  &8&m                                        
+  &#FF6A00&l 🎥 LIVESTREAM ANKÜNDIGUNG
+  &7 Streamer: &e{player}
+  &7 Link:     &#00BFFF{link}
+  &8&m                                        
+
+# ── Creator Codes ──────────────────────────────────────────
+creatorcode-usage: "{prefix}&cNutzung: &e/creatorcode <create|redeem> [...]"
+creatorcode-create-usage: "{prefix}&cNutzung: &e/creatorcode create <Spieler> <Code>"
+creatorcode-redeem-usage: "{prefix}&cNutzung: &e/creatorcode redeem <Code>"
+
+creatorcode-created: "{prefix}&aCode &e{code}&a wurde erfolgreich für Streamer &6{streamer}&a erstellt!"
+creatorcode-already-exists: "{prefix}&cDieser Code existiert bereits."
+creatorcode-not-found: "{prefix}&cDieser Creator Code wurde nicht gefunden."
+creatorcode-already-redeemed: "{prefix}&cDu hast bereits einen Creator Code eingelöst."
+creatorcode-streamer-offline: "{prefix}&7Hinweis: Der Streamer &e{streamer}&7 ist gerade nicht online."
+
+creatorcode-redeemed-player: |
+  {prefix}&aDu hast den Code &e{code}&a von &6{streamer}&a erfolgreich eingelöst!
+  {prefix}&7Du hast erhalten: &fEisen-Rüstung, Eisen-Werkzeuge, 2x Verzauberter Apfel & den Kopf von &e{streamer}&7!
+creatorcode-redeemed-streamer: "{prefix}&#FFD700Spieler &e{player}&6 hat deinen Creator Code &e{code}&6 eingelöst! Du erhältst &a{reward}&6 {currency}&6!"
+creatorcode-deleted: "{prefix}&cCode &e{code}&c wurde gelöscht."
+creatorcode-not-creator: "{prefix}&cDer Spieler &e{player}&c ist kein registrierter Content Creator."
+
+# ── /content GUI ───────────────────────────────────────────
+gui-title: "&8» &6Content Creator &8«"
+
+gui-creator-online-name: "&#00FF7F&l{player}"
+gui-creator-live-name: "&#FF4500&l🔴 {player} &cist LIVE!"
+
+gui-creator-online-lore:
+  - "&7Status: &#00FF7F● Online"
+  - "&7Stream: &cNicht live"
+  - ""
+  - "&8Kein aktiver Stream."
+
+gui-creator-live-lore:
+  - "&7Status: &#FF4500● LIVE"
+  - "&7Link:   &#00BFFF{link}"
+  - ""
+  - "&eKlicke zum Kopieren des Links!"
+
+gui-creator-offline-name: "&8{player}"
+gui-creator-offline-lore:
+  - "&7Status: &#FF0000● Offline"
+
+gui-no-creators: "{prefix}&cEs sind keine Content Creator registriert."
+gui-link-copied: "{prefix}&aDer Stream-Link wurde in deine Zwischenablage kopiert!"
+
+# ── Admin – Creator verwalten ──────────────────────────────
+addcreator-usage: "{prefix}&cNutzung: &e/ghostystream addcreator <Spieler>"
+addcreator-success: "{prefix}&a{player}&a wurde als Content Creator hinzugefügt!"
+addcreator-already: "{prefix}&e{player}&e ist bereits ein Content Creator."
+
+removecreator-usage: "{prefix}&cNutzung: &e/ghostystream removecreator <Spieler>"
+removecreator-success: "{prefix}&e{player}&c wurde als Content Creator entfernt."
+removecreator-not-creator: "{prefix}&e{player}&c ist kein Content Creator."
+
+# ── Help ───────────────────────────────────────────────────
+help-header: "&8&m══════ &6&lGhostyStream &8&m══════"
+help-stream: "&e/stream <link|stop> &7- Aktiviere/Deaktiviere deinen Stream"
+help-content: "&e/content &7- Öffne das Creator-Menü"
+help-creatorcode-redeem: "&e/creatorcode redeem <code> &7- Löse einen Creator Code ein"
+help-creatorcode-create: "&e/creatorcode create <player> <code> &7- [Admin] Erstelle einen Code"
+help-ghostystream: "&e/ghostystream reload &7- Plugin neu laden"
+help-footer: "&8&m══════════════════════════"
